@@ -1,0 +1,1 @@
+lcedty_night_lamp\startup_stm32f103xb.o: startup_stm32f103xb.s
