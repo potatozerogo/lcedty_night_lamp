@@ -20,15 +20,17 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "dma.h"
-#include "i2c.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "wifi.h"
 #include "ws2812.h"
+#include "sht2x_i2c.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,17 +53,40 @@
 
 uint8_t test_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
 
+uint32_t Sys_Clock_Data;
+//===========UART===============
+uint8_t String_Statr[] = "=====START=====\r\n";
+uint8_t Rx_uart1_buff[32];
+uint8_t Tx_uart1_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
+uint8_t Rx_uart2_buff[32];
+uint8_t Tx_uart2_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance == USART1)
+	{
+		uart_receive_input(*Rx_uart1_buff);
+		__HAL_UART_CLEAR_FLAG(&huart1,UART_FLAG_RXNE);
+		HAL_UART_Receive_IT(&huart1,Rx_uart1_buff,1);
+	}
 
+	if(huart->Instance == USART2)
+	{
+		HAL_UART_Transmit(&huart2,Rx_uart2_buff,1,1000);
+		HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -93,15 +118,31 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
-  MX_I2C1_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
-  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
+	HAL_UART_Receive_IT(&huart1,Rx_uart1_buff,1);
+	HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
+	
+	wifi_protocol_init();//³õÊ¼»¯Í¿Ñ»WB3S
+	
+	i2c_CfgGpio();
+	HAL_Delay(20);
+	SHT2x_Init(); 
+	HAL_Delay(20);
+	
+	Clear_Color();	
+//	mcu_set_wifi_mode(SMART_CONFIG);
 
   /* USER CODE END 2 */
 
+  /* Call init function for freertos objects (in freertos.c) */
+  MX_FREERTOS_Init(); 
+  /* Start scheduler */
+  osKernelStart();
+ 
+  /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -109,12 +150,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		
-		HAL_Delay(500);
-		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port,TEST_LED_Pin);
-		//HAL_SPI_Transmit_DMA(&hspi1,test_buff,10);
-		
-		Clear_Color();
+		wifi_uart_service();
+
   }
   /* USER CODE END 3 */
 }
@@ -136,7 +173,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL4;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL5;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -147,7 +184,7 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
