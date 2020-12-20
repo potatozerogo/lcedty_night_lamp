@@ -53,3 +53,6 @@ lcedty_night_lamp\freertos.o: ../Inc/usart.h
 lcedty_night_lamp\freertos.o: ..\user\ws2812.h
 lcedty_night_lamp\freertos.o: ../Inc/spi.h
 lcedty_night_lamp\freertos.o: ..\user\sht2x_i2c.h
+lcedty_night_lamp\freertos.o: ..\user\bsp_i2c_gpio.h
+lcedty_night_lamp\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+lcedty_night_lamp\freertos.o: ..\user\key.h

@@ -140,23 +140,23 @@ unsigned int FourBitsStringBCD_TO_Int(unsigned char *string)
 			case '9':
 				Data += 9 * 0x1000>>(4*i);
 				break;
-			case 'A':
+			case 'a':
 				Data += 10 * 0x1000>>(4*i);
 				break;
-			case 'B':
+			case 'b':
 				Data += 11 * 0x1000>>(4*i);
 				break;
-			case 'C':
+			case 'c':
 				Data += 12 * 0x1000>>(4*i);
 				break;
-			case 'D':
+			case 'd':
 				Data += 13 * 0x1000>>(4*i);
 				break;
-			case 'E':
+			case 'e':
 				Data += 14 * 0x1000>>(4*i);
 				break;
-			case 'F':
-				Data += 14 * 0x1000>>(4*i);
+			case 'f':
+				Data += 15 * 0x1000>>(4*i);
 				break;
 			default:
 				break;

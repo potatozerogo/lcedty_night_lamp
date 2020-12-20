@@ -29,6 +29,7 @@
 #include "wifi.h"
 #include "ws2812.h"
 #include "sht2x_i2c.h"
+#include "key.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,12 +51,12 @@
 /* USER CODE BEGIN Variables */
 
 int16_t Test_T_Data,Test_H_Data; 
-
+extern uint8_t Switch_Led_Status;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId WB3SHandle;
 osThreadId TH_SensorHandle;
-osThreadId LED_ShowHandle;
+osThreadId KeyHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -65,7 +66,7 @@ osThreadId LED_ShowHandle;
 void StartDefaultTask(void const * argument);
 void StartTask_WB3S(void const * argument);
 void StartTask_TH_Sensor(void const * argument);
-void StartTask_LED_Show(void const * argument);
+void StartTask_Key(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -121,12 +122,12 @@ void MX_FREERTOS_Init(void) {
   WB3SHandle = osThreadCreate(osThread(WB3S), NULL);
 
   /* definition and creation of TH_Sensor */
-  osThreadDef(TH_Sensor, StartTask_TH_Sensor, osPriorityIdle, 0, 128);
+  osThreadDef(TH_Sensor, StartTask_TH_Sensor, osPriorityNormal, 0, 128);
   TH_SensorHandle = osThreadCreate(osThread(TH_Sensor), NULL);
 
-  /* definition and creation of LED_Show */
-  osThreadDef(LED_Show, StartTask_LED_Show, osPriorityIdle, 0, 128);
-  LED_ShowHandle = osThreadCreate(osThread(LED_Show), NULL);
+  /* definition and creation of Key */
+  osThreadDef(Key, StartTask_Key, osPriorityIdle, 0, 128);
+  KeyHandle = osThreadCreate(osThread(Key), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -167,7 +168,6 @@ void StartTask_WB3S(void const * argument)
   for(;;)
   {
 		wifi_uart_service();
-    osDelay(1);
   }
   /* USER CODE END StartTask_WB3S */
 }
@@ -190,27 +190,49 @@ void StartTask_TH_Sensor(void const * argument)
 //		Test_H_Data = Get_SHT2x_Rh();
     mcu_dp_value_update(DPID_TEMPERATURE_DATA,Get_SHT2x_Temp()/10); //VALUE?????;
     mcu_dp_value_update(DPID_HUMIDITY_DATA,Get_SHT2x_Rh()/10); //VALUE?????;
-    osDelay(10000);
+    osDelay(120000);
   }
   /* USER CODE END StartTask_TH_Sensor */
 }
 
-/* USER CODE BEGIN Header_StartTask_LED_Show */
+/* USER CODE BEGIN Header_StartTask_Key */
 /**
-* @brief Function implementing the LED_Show thread.
+* @brief Function implementing the Key thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask_LED_Show */
-void StartTask_LED_Show(void const * argument)
+/* USER CODE END Header_StartTask_Key */
+void StartTask_Key(void const * argument)
 {
-  /* USER CODE BEGIN StartTask_LED_Show */
+  /* USER CODE BEGIN StartTask_Key */
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+		switch(Read_Key())
+		{
+			case 1:
+					if(Switch_Led_Status == 1) 
+					{
+							Switch_Led_Status = 0;
+						  mcu_dp_bool_update(DPID_SWITCH_LED,0);//上传开关状态
+							Clear_Color();	
+					}
+					else 
+					{
+						  Switch_Led_Status = 1;
+						  mcu_dp_bool_update(DPID_SWITCH_LED,1);//上传开关状态
+							Send_Color();
+					}
+					break;
+			case 2:
+					mcu_set_wifi_mode(SMART_CONFIG);//长按5秒，重新设置网络
+					break;
+			default:
+					break;
+		}
+    osDelay(50);
   }
-  /* USER CODE END StartTask_LED_Show */
+  /* USER CODE END StartTask_Key */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -3,6 +3,7 @@
 "lcedty_night_lamp\ws2812.o"
 "lcedty_night_lamp\bsp_i2c_gpio.o"
 "lcedty_night_lamp\sht2x_i2c.o"
+"lcedty_night_lamp\key.o"
 "lcedty_night_lamp\main.o"
 "lcedty_night_lamp\gpio.o"
 "lcedty_night_lamp\dma.o"

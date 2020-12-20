@@ -25,6 +25,8 @@
 
 #include "wifi.h"
 
+extern uint8_t Switch_Led_Status;
+
 #ifdef WEATHER_ENABLE
 /**
  * @var    weather_choose
@@ -145,12 +147,12 @@ void all_data_update(void)
     mcu_dp_bool_update(DPID_SWITCH_LED,0); //BOOL型数据上报;开关
     mcu_dp_enum_update(DPID_WORK_MODE,0); //枚举型数据上报;当前模式
     mcu_dp_value_update(DPID_BRIGHT_VALUE,0); //VALUE型数据上报;当前亮度值
-    mcu_dp_value_update(DPID_TEMP_VALUE,0); //VALUE型数据上报;当前冷暖值
+//    mcu_dp_value_update(DPID_TEMP_VALUE,0); //VALUE型数据上报;当前冷暖值
     mcu_dp_string_update(DPID_COLOUR_DATA,0,0); //STRING型数据上报;当前彩光指针,当前彩光数据长度
-    mcu_dp_string_update(DPID_SCENE_DATA,0,0); //STRING型数据上报;当前场景指针,当前场景数据长度
-    mcu_dp_value_update(DPID_COUNTDOWN,1); //VALUE型数据上报;
-    mcu_dp_value_update(DPID_TEMPERATURE_DATA,11); //VALUE型数据上报;
-    mcu_dp_value_update(DPID_HUMIDITY_DATA,22); //VALUE型数据上报;
+//    mcu_dp_string_update(DPID_SCENE_DATA,0,0); //STRING型数据上报;当前场景指针,当前场景数据长度
+//    mcu_dp_value_update(DPID_COUNTDOWN,1); //VALUE型数据上报;
+    mcu_dp_value_update(DPID_TEMPERATURE_DATA,0); //VALUE型数据上报;
+    mcu_dp_value_update(DPID_HUMIDITY_DATA,0); //VALUE型数据上报;
 
 }
 
@@ -178,17 +180,11 @@ static unsigned char dp_download_switch_led_handle(const unsigned char value[], 
     switch_led = mcu_get_dp_download_bool(value,length);
     if(switch_led == 0) {
         //开关关
+				Switch_Led_Status = 0;//改变本地状态
 				Clear_Color();	
     }else {
         //开关开
-				Set_Color(0,0,10,0);
-				Set_Color(0,10,10,1);
-				Set_Color(0,10,0,2);
-				Set_Color(10,10,0,3);
-				Set_Color(10,0,0,4);
-				Set_Color(10,0,5,5);
-				Set_Color(5,0,10,6);
-				Set_Color(5,5,5,7);
+				Switch_Led_Status = 1;//改变本地状态
 				Send_Color();
     }
   
@@ -326,17 +322,17 @@ static unsigned char dp_download_colour_data_handle(const unsigned char value[],
     string_data[10] = value[10];
     string_data[11] = value[11];
 	
-//	unsigned int V_Data,S_Data,H_Data;
-//	unsigned char R_Data,G_Data,B_Data;
-//	V_Data = FourBitsStringBCD_TO_Int(string_data);
-//	S_Data = FourBitsStringBCD_TO_Int(&string_data[4]);
-//	H_Data = FourBitsStringBCD_TO_Int(&string_data[8]);
-//	HSVtoRGB(&R_Data,&G_Data,&B_Data,H_Data,S_Data/10,V_Data/10);
-//	for(unsigned char i = 0; i < 8; i++)
-//	{
-//		Set_Color(R_Data,G_Data,B_Data,i);
-//	} 
-//	Send_Color();
+	unsigned int V_Data,S_Data,H_Data;
+	unsigned char R_Data,G_Data,B_Data;
+	H_Data = FourBitsStringBCD_TO_Int(string_data);
+	S_Data = FourBitsStringBCD_TO_Int(&string_data[4]);
+	V_Data = FourBitsStringBCD_TO_Int(&string_data[8]);
+	HSVtoRGB(&R_Data,&G_Data,&B_Data,H_Data,S_Data/10,V_Data/10);
+	for(unsigned char i = 0; i < 8; i++)
+	{
+		Set_Color(R_Data,G_Data,B_Data,i);
+	} 
+	Send_Color();
 	
     
     //处理完DP数据后应有反馈

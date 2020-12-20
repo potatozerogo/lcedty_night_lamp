@@ -2,6 +2,7 @@
 #define __SHT2x_I2C_H
 
 #include "stm32f1xx_hal.h"
+#include "bsp_i2c_gpio.h"
 
 #define    TRIG_TEMP_MEASUREMENT_HM   0xE3 //command trig. temp meas. hold master
 #define    TRIG_HUMI_MEASUREMENT_HM   0xE5 //command trig. humidity meas. hold master

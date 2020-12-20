@@ -51,7 +51,9 @@
 
 /* USER CODE BEGIN PV */
 
-uint8_t test_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
+uint8_t Switch_Led_Status = 0;//开关状态
+
+//uint8_t test_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
 
 uint32_t Sys_Clock_Data;
 //===========UART===============
@@ -125,14 +127,15 @@ int main(void)
 	HAL_UART_Receive_IT(&huart1,Rx_uart1_buff,1);
 	HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
 	
+	HAL_Delay(20);
 	wifi_protocol_init();//初始化涂鸦WB3S
-	
 	i2c_CfgGpio();
-	HAL_Delay(20);
 	SHT2x_Init(); 
-	HAL_Delay(20);
 	
-	Clear_Color();	
+	Clear_Color();
+	HAL_Delay(1);	
+	Clear_Color();
+
 //	mcu_set_wifi_mode(SMART_CONFIG);
 
   /* USER CODE END 2 */

@@ -55,3 +55,5 @@ lcedty_night_lamp\main.o: ..\mcu_sdk\system.h
 lcedty_night_lamp\main.o: ..\mcu_sdk\mcu_api.h
 lcedty_night_lamp\main.o: ..\user\ws2812.h
 lcedty_night_lamp\main.o: ..\user\sht2x_i2c.h
+lcedty_night_lamp\main.o: ..\user\bsp_i2c_gpio.h
+lcedty_night_lamp\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
