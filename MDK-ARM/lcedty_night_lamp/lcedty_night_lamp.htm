@@ -3,7 +3,7 @@
 <title>Static Call Graph - [lcedty_night_lamp\lcedty_night_lamp.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image lcedty_night_lamp\lcedty_night_lamp.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060020: Last Updated: Sun Dec 20 20:42:06 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060020: Last Updated: Wed Dec 23 22:06:37 2020
 <BR><P>
 <H3>Maximum Stack Usage =        288 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -495,7 +495,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[98]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Key
+<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDefaultTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Key
 </UL>
 
 <P><STRONG><a name="[a9]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_TogglePin))
@@ -916,19 +917,20 @@ Global Symbols
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_colour_data_handle
 </UL>
 
-<P><STRONG><a name="[3f]"></a>StartDefaultTask</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, freertos.o(i.StartDefaultTask))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = StartDefaultTask &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+<P><STRONG><a name="[3f]"></a>StartDefaultTask</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, freertos.o(i.StartDefaultTask))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = StartDefaultTask &rArr; mcu_set_wifi_mode &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_set_wifi_mode
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
-<P><STRONG><a name="[42]"></a>StartTask_Key</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, freertos.o(i.StartTask_Key))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = StartTask_Key &rArr; mcu_set_wifi_mode &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+<P><STRONG><a name="[42]"></a>StartTask_Key</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, freertos.o(i.StartTask_Key))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = StartTask_Key &rArr; mcu_dp_bool_update &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_set_wifi_mode
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Key
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Send_Color
@@ -1033,7 +1035,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = all_data_update &rArr; mcu_dp_string_update &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_string_update
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
 </UL>
@@ -1061,7 +1063,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = dp_download_handle &rArr; dp_download_colour_data_handle &rArr; mcu_dp_string_update &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Color
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Send_Color
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clear_Color
@@ -1183,7 +1185,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[aa]"></a>mcu_dp_bool_update</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, mcu_api.o(i.mcu_dp_bool_update))
+<P><STRONG><a name="[ab]"></a>mcu_dp_bool_update</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, mcu_api.o(i.mcu_dp_bool_update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = mcu_dp_bool_update &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_uart_write_frame
@@ -1241,13 +1243,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 </UL>
 
-<P><STRONG><a name="[ab]"></a>mcu_set_wifi_mode</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mcu_api.o(i.mcu_set_wifi_mode))
+<P><STRONG><a name="[aa]"></a>mcu_set_wifi_mode</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mcu_api.o(i.mcu_set_wifi_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = mcu_set_wifi_mode &rArr; wifi_uart_write_frame &rArr; uart_transmit_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_uart_write_frame
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_wifi_uart_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTask_Key
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDefaultTask
 </UL>
 
 <P><STRONG><a name="[e2]"></a>my_memcpy</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, mcu_api.o(i.my_memcpy))
@@ -1317,9 +1319,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b8]"></a>set_wifi_uart_byte</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, system.o(i.set_wifi_uart_byte))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_set_wifi_mode
+<BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_set_wifi_mode
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_string_update
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
@@ -1456,9 +1458,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_transmit_output
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_set_wifi_mode
+<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_set_wifi_mode
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_string_update

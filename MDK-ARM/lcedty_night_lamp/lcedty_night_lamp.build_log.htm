@@ -27,12 +27,20 @@ Project File Date:  12/20/2020
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 (build 20)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'lcedty_night_lamp'
+compiling main.c...
 compiling freertos.c...
+compiling mcu_api.c...
 compiling protocol.c...
+compiling system.c...
+..\mcu_sdk\system.c(146): warning:  #177-D: variable "str" was declared but never referenced
+      unsigned char str[10] = {0};
+..\mcu_sdk\system.c(403): warning:  #177-D: variable "result" was declared but never referenced
+      unsigned char result;
+..\mcu_sdk\system.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=15112 RO-data=464 RW-data=156 ZI-data=5684  
+Program Size: Code=15160 RO-data=464 RW-data=156 ZI-data=5684  
 FromELF: creating hex file...
-"lcedty_night_lamp\lcedty_night_lamp.axf" - 0 Error(s), 0 Warning(s).
+"lcedty_night_lamp\lcedty_night_lamp.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +58,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.1.0
-Build Time Elapsed:  00:00:11
+Build Time Elapsed:  00:00:26
 </pre>
 </body>
 </html>

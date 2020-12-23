@@ -51,7 +51,8 @@
 /* USER CODE BEGIN Variables */
 
 int16_t Test_T_Data,Test_H_Data; 
-extern uint8_t Switch_Led_Status;
+extern uint8_t Switch_Led_Status;//main.c
+extern uint8_t Wb3s_Wifi_Status;//wifi?? main.c
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId WB3SHandle;
@@ -146,10 +147,67 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
+	uint16_t Button_Hold_Timer = 0;
+	uint8_t First_Start_flag = 1;
   for(;;)
   {
+		if(First_Start_flag == 1)//上电长按按键3秒进入wifi重设状态
+		{
+			while(HAL_GPIO_ReadPin(BUTTON_GPIO_Port,BUTTON_Pin) == 0)
+			{
+				if(Button_Hold_Timer == 30)
+					mcu_set_wifi_mode(SMART_CONFIG);
+				if(Button_Hold_Timer > 30)
+							HAL_GPIO_TogglePin(SYS_LED_GPIO_Port,SYS_LED_Pin);
+				Button_Hold_Timer++;
+				osDelay(100);	
+			}
+			First_Start_flag = 0;
+		}
 		HAL_GPIO_TogglePin(SYS_LED_GPIO_Port,SYS_LED_Pin);
-    osDelay(500);
+		osDelay(1000);
+//    switch(Wb3s_Wifi_Status) 
+//		{
+//				case 0:
+//					HAL_GPIO_TogglePin(SYS_LED_GPIO_Port,SYS_LED_Pin);
+//					osDelay(500);
+//				break;
+//				
+//        case 1:
+//					HAL_GPIO_TogglePin(NET_LED_GPIO_Port,NET_LED_Pin);
+//					osDelay(100);
+//        break;
+//        
+//        case 2:
+//					HAL_GPIO_TogglePin(NET_LED_GPIO_Port,NET_LED_Pin);
+//					osDelay(100);
+//        break;
+//        
+//        case 3:
+//					HAL_GPIO_WritePin(NET_LED_GPIO_Port,NET_LED_Pin,GPIO_PIN_SET);
+//					osDelay(100);
+//        break;
+//        
+//        case 4:
+//					HAL_GPIO_WritePin(NET_LED_GPIO_Port,NET_LED_Pin,GPIO_PIN_SET);
+//					osDelay(100);
+//        break;
+//        
+//        case 5:
+//					HAL_GPIO_TogglePin(NET_LED_GPIO_Port,NET_LED_Pin);
+//					osDelay(1000);
+//        break;
+//      
+//        case 6:
+//					HAL_GPIO_TogglePin(NET_LED_GPIO_Port,NET_LED_Pin);
+//					osDelay(5000);
+//				break;
+//				
+//        case 7:
+//					HAL_GPIO_TogglePin(NET_LED_GPIO_Port,NET_LED_Pin);
+//					osDelay(100);
+//				break;
+//			}
   }
   /* USER CODE END StartDefaultTask */
 }
@@ -225,7 +283,7 @@ void StartTask_Key(void const * argument)
 					}
 					break;
 			case 2:
-					mcu_set_wifi_mode(SMART_CONFIG);//长按5秒，重新设置网络
+//					 mcu_set_wifi_mode(SMART_CONFIG);//长按5秒，重新设置网络
 					break;
 			default:
 					break;

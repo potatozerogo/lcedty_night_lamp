@@ -25,7 +25,8 @@
 
 #include "wifi.h"
 
-extern uint8_t Switch_Led_Status;
+extern uint8_t Switch_Led_Status;//main.c
+extern uint8_t Wb3s_Wifi_Status;//wifi状态 main.c
 
 #ifdef WEATHER_ENABLE
 /**
@@ -821,30 +822,37 @@ void get_wifi_status(unsigned char result)
     switch(result) {
         case 0:
             //wifi工作状态1
+					Wb3s_Wifi_Status = 1;
         break;
     
         case 1:
             //wifi工作状态2
+					Wb3s_Wifi_Status = 2;
         break;
         
         case 2:
             //wifi工作状态3
+					Wb3s_Wifi_Status = 3;
         break;
         
         case 3:
             //wifi工作状态4
+					Wb3s_Wifi_Status = 4;
         break;
         
         case 4:
             //wifi工作状态5
+					Wb3s_Wifi_Status = 5;
         break;
         
         case 5:
             //wifi工作状态6
+					Wb3s_Wifi_Status = 6;
         break;
       
         case 6:
             //wifi工作状态7
+					Wb3s_Wifi_Status = 7;
         break;
         
         default:break;
