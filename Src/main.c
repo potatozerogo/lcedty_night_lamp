@@ -52,17 +52,15 @@
 /* USER CODE BEGIN PV */
 
 uint8_t Switch_Led_Status = 0;//¿ª¹Ø×´Ì¬
+unsigned int LED_V_Data,LED_S_Data,LED_H_Data;
 uint8_t Wb3s_Wifi_Status = 0;//wifi×´Ì¬
 
-//uint8_t test_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
-
-uint32_t Sys_Clock_Data;
 //===========UART===============
 uint8_t String_Statr[] = "=====START=====\r\n";
 uint8_t Rx_uart1_buff[32];
-uint8_t Tx_uart1_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
+//uint8_t Tx_uart1_buff[10];
 uint8_t Rx_uart2_buff[32];
-uint8_t Tx_uart2_buff[10] = {0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
+//uint8_t Tx_uart2_buff[10];
 
 /* USER CODE END PV */
 
@@ -136,19 +134,6 @@ int main(void)
 	Clear_Color();
 	HAL_Delay(1);	
 	Clear_Color();
-	
-//	uint16_t Button_Hold_Timer = 0;
-//	while(HAL_GPIO_ReadPin(BUTTON_GPIO_Port,BUTTON_Pin) == 0)
-//	{
-//		if(Button_Hold_Timer == 30)
-//			mcu_set_wifi_mode(SMART_CONFIG);
-//		if(Button_Hold_Timer > 30)
-//					HAL_GPIO_TogglePin(SYS_LED_GPIO_Port,SYS_LED_Pin);
-//		Button_Hold_Timer++;
-//		HAL_Delay(100);	
-//	}
-
-//	mcu_set_wifi_mode(SMART_CONFIG);
 
   /* USER CODE END 2 */
 

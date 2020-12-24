@@ -27,6 +27,7 @@
 
 extern uint8_t Switch_Led_Status;//main.c
 extern uint8_t Wb3s_Wifi_Status;//wifi状态 main.c
+extern unsigned int LED_V_Data,LED_S_Data,LED_H_Data;
 
 #ifdef WEATHER_ENABLE
 /**
@@ -253,12 +254,16 @@ static unsigned char dp_download_bright_value_handle(const unsigned char value[]
     bright_value = mcu_get_dp_download_value(value,length);
 
     //VALUE类型数据处理
+		unsigned char R_Data,G_Data,B_Data;
+	
+		LED_V_Data = bright_value/10;
+
+		HSVtoRGB(&R_Data,&G_Data,&B_Data,LED_H_Data,LED_S_Data,LED_V_Data);
 		for(unsigned char i = 0; i < 8; i++)
 		{
-			Set_Color(bright_value/4,bright_value/4,bright_value/4,i);
+			Set_Color(R_Data,G_Data,B_Data,i);
 		} 
 		Send_Color();
-
     
     //处理完DP数据后应有反馈
     ret = mcu_dp_value_update(DPID_BRIGHT_VALUE,bright_value);
@@ -328,7 +333,11 @@ static unsigned char dp_download_colour_data_handle(const unsigned char value[],
 	H_Data = FourBitsStringBCD_TO_Int(string_data);
 	S_Data = FourBitsStringBCD_TO_Int(&string_data[4]);
 	V_Data = FourBitsStringBCD_TO_Int(&string_data[8]);
-	HSVtoRGB(&R_Data,&G_Data,&B_Data,H_Data,S_Data/10,V_Data/10);
+	LED_H_Data = H_Data;
+	LED_S_Data = S_Data/10;
+	LED_V_Data = V_Data/10;
+	
+	HSVtoRGB(&R_Data,&G_Data,&B_Data,LED_H_Data,LED_S_Data,LED_V_Data);
 	for(unsigned char i = 0; i < 8; i++)
 	{
 		Set_Color(R_Data,G_Data,B_Data,i);

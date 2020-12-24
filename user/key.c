@@ -3,6 +3,7 @@
 
 uint8_t Key_State = 0;
 uint8_t Key_Timer = 0;
+uint8_t Key_Hitted = 0;
 
 uint8_t Read_Key(void)	
 {
@@ -17,7 +18,7 @@ uint8_t Read_Key(void)
 			if(HAL_GPIO_ReadPin(BUTTON_GPIO_Port,BUTTON_Pin) == 0 )
 			{
 				Key_State++;
-				key_Value = 1;
+				Key_Hitted = 1;
 			}
 			else
 			{
@@ -27,14 +28,17 @@ uint8_t Read_Key(void)
 		case 2:
 			if(HAL_GPIO_ReadPin(BUTTON_GPIO_Port,BUTTON_Pin) == 0 )
 			{
-				if(++Key_Timer == 100)
+				if(++Key_Timer >= 60)//ÈýÃë
 				{
 					key_Value = 2;
-					Key_Timer = 0;
+					Key_Hitted = 0;
+					if(Key_Timer >= 255)
+						Key_Timer = 30;
 				}
 			}
 			else
 			{
+				key_Value = Key_Hitted;
 				Key_Timer = 0;
 				Key_State = 0;
 			}

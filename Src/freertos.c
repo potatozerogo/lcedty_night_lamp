@@ -53,6 +53,7 @@
 int16_t Test_T_Data,Test_H_Data; 
 extern uint8_t Switch_Led_Status;//main.c
 extern uint8_t Wb3s_Wifi_Status;//wifi?? main.c
+extern unsigned int LED_V_Data,LED_S_Data,LED_H_Data;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId WB3SHandle;
@@ -264,6 +265,9 @@ void StartTask_Key(void const * argument)
 {
   /* USER CODE BEGIN StartTask_Key */
   /* Infinite loop */
+	unsigned char R_Data,G_Data,B_Data;
+	char Adjust_Bright_Direction = 0;	
+	
   for(;;)
   {
 		switch(Read_Key())
@@ -283,7 +287,24 @@ void StartTask_Key(void const * argument)
 					}
 					break;
 			case 2:
-//					 mcu_set_wifi_mode(SMART_CONFIG);//长按5秒，重新设置网络
+				  if(Adjust_Bright_Direction == 1)
+					{	
+						LED_V_Data += 1;
+						if(LED_V_Data >= 100)
+							Adjust_Bright_Direction = 0;
+					}
+					else
+					{	
+						LED_V_Data -= 1;
+						if(LED_V_Data <= 0)
+							Adjust_Bright_Direction = 1;
+					}
+					HSVtoRGB(&R_Data,&G_Data,&B_Data,LED_H_Data,LED_S_Data,LED_V_Data);
+					for(unsigned char i = 0; i < 8; i++)
+					{
+						Set_Color(R_Data,G_Data,B_Data,i);
+					} 
+					Send_Color();
 					break;
 			default:
 					break;
