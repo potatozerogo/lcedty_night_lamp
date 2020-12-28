@@ -1,9 +1,9 @@
 Dependencies for Project 'lcedty_night_lamp', Target 'lcedty_night_lamp': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x5FDF3C91)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I..\Inc-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 516" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o lcedty_night_lamp\startup_stm32f103xb.o --depend lcedty_night_lamp\startup_stm32f103xb.d)
+F (startup_stm32f103xb.s)(0x5FE9C9E1)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I..\Inc-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 516" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o lcedty_night_lamp\startup_stm32f103xb.o --depend lcedty_night_lamp\startup_stm32f103xb.d)
 F (..\user\ws2812.c)(0x5FDF0D10)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\ws2812.o --omf_browse lcedty_night_lamp\ws2812.crf --depend lcedty_night_lamp\ws2812.d)
 I (..\user\ws2812.h)(0x5FCB7914)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -30,8 +30,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-I (../Inc/spi.h)(0x5FDF3C89)
-I (../Inc/main.h)(0x5FDF3C8B)
+I (../Inc/spi.h)(0x5FE9C9DB)
+I (../Inc/main.h)(0x5FE9C9DC)
 F (..\user\bsp_i2c_gpio.c)(0x5F3F3DF3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\bsp_i2c_gpio.o --omf_browse lcedty_night_lamp\bsp_i2c_gpio.crf --depend lcedty_night_lamp\bsp_i2c_gpio.d)
 I (..\user\bsp_i2c_gpio.h)(0x5FCC5B99)
 I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x55AEF5F2)
@@ -44,7 +44,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FC6297C)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FC6297C)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5FC62995)
@@ -66,7 +66,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (..\user\sht2x_i2c.c)(0x5FCC5F27)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\sht2x_i2c.o --omf_browse lcedty_night_lamp\sht2x_i2c.crf --depend lcedty_night_lamp\sht2x_i2c.d)
 I (..\user\sht2x_i2c.h)(0x5FDDEE30)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -97,7 +97,7 @@ I (..\user\bsp_i2c_gpio.h)(0x5FCC5B99)
 I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -114,7 +114,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 F (..\user\key.c)(0x5FE487F9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\key.o --omf_browse lcedty_night_lamp\key.crf --depend lcedty_night_lamp\key.d)
 I (..\user\key.h)(0x5F8E7E13)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -141,11 +141,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-I (../Inc/main.h)(0x5FDF3C8B)
-F (../Src/main.c)(0x5FE47D9F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\main.o --omf_browse lcedty_night_lamp\main.crf --depend lcedty_night_lamp\main.d)
-I (../Inc/main.h)(0x5FDF3C8B)
+I (../Inc/main.h)(0x5FE9C9DC)
+F (../Src/main.c)(0x5FE9DE38)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\main.o --omf_browse lcedty_night_lamp\main.crf --depend lcedty_night_lamp\main.d)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -174,7 +174,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -186,10 +186,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5FC6297F)
-I (../Inc/dma.h)(0x5FDF3C87)
-I (../Inc/spi.h)(0x5FDF3C89)
-I (../Inc/usart.h)(0x5FDF3C89)
-I (../Inc/gpio.h)(0x5FDF3C86)
+I (../Inc/dma.h)(0x5FE9C9DA)
+I (../Inc/spi.h)(0x5FE9C9DB)
+I (../Inc/usart.h)(0x5FE9C9DB)
+I (../Inc/gpio.h)(0x5FE9C9D9)
 I (..\mcu_sdk\wifi.h)(0x5FCB4CDE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
@@ -200,11 +200,11 @@ I (..\user\ws2812.h)(0x5FCB7914)
 I (..\user\sht2x_i2c.h)(0x5FDDEE30)
 I (..\user\bsp_i2c_gpio.h)(0x5FCC5B99)
 I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x55AEF5F2)
-F (../Src/gpio.c)(0x5FDF3C86)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\gpio.o --omf_browse lcedty_night_lamp\gpio.crf --depend lcedty_night_lamp\gpio.d)
-I (../Inc/gpio.h)(0x5FDF3C86)
-I (../Inc/main.h)(0x5FDF3C8B)
+F (../Src/gpio.c)(0x5FE9C9D9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\gpio.o --omf_browse lcedty_night_lamp\gpio.crf --depend lcedty_night_lamp\gpio.d)
+I (../Inc/gpio.h)(0x5FE9C9D9)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -231,11 +231,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-F (../Src/dma.c)(0x5FDF3C87)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\dma.o --omf_browse lcedty_night_lamp\dma.crf --depend lcedty_night_lamp\dma.d)
-I (../Inc/dma.h)(0x5FDF3C87)
-I (../Inc/main.h)(0x5FDF3C8B)
+F (../Src/dma.c)(0x5FE9C9D9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\dma.o --omf_browse lcedty_night_lamp\dma.crf --depend lcedty_night_lamp\dma.d)
+I (../Inc/dma.h)(0x5FE9C9DA)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -262,11 +262,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-F (../Src/freertos.c)(0x5FE488CC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\freertos.o --omf_browse lcedty_night_lamp\freertos.crf --depend lcedty_night_lamp\freertos.d)
+F (../Src/freertos.c)(0x5FE9E487)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\freertos.o --omf_browse lcedty_night_lamp\freertos.crf --depend lcedty_night_lamp\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -274,9 +274,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5FC6297F)
-I (../Inc/main.h)(0x5FDF3C8B)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -312,18 +312,18 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (..\mcu_sdk\protocol.h)(0x5FE34ED4)
 I (..\mcu_sdk\system.h)(0x5FC7869E)
 I (..\mcu_sdk\mcu_api.h)(0x5FC7869E)
-I (../Inc/usart.h)(0x5FDF3C89)
+I (../Inc/usart.h)(0x5FE9C9DB)
 I (..\user\ws2812.h)(0x5FCB7914)
-I (../Inc/spi.h)(0x5FDF3C89)
+I (../Inc/spi.h)(0x5FE9C9DB)
 I (..\user\sht2x_i2c.h)(0x5FDDEE30)
 I (..\user\bsp_i2c_gpio.h)(0x5FCC5B99)
 I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x55AEF5F2)
 I (..\user\key.h)(0x5F8E7E13)
-F (../Src/spi.c)(0x5FDF3C88)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\spi.o --omf_browse lcedty_night_lamp\spi.crf --depend lcedty_night_lamp\spi.d)
-I (../Inc/spi.h)(0x5FDF3C89)
-I (../Inc/main.h)(0x5FDF3C8B)
+F (../Src/spi.c)(0x5FE9C9DB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\spi.o --omf_browse lcedty_night_lamp\spi.crf --depend lcedty_night_lamp\spi.d)
+I (../Inc/spi.h)(0x5FE9C9DB)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -350,11 +350,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-F (../Src/usart.c)(0x5FDF3C89)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\usart.o --omf_browse lcedty_night_lamp\usart.crf --depend lcedty_night_lamp\usart.d)
-I (../Inc/usart.h)(0x5FDF3C89)
-I (../Inc/main.h)(0x5FDF3C8B)
+F (../Src/usart.c)(0x5FE9C9DB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\usart.o --omf_browse lcedty_night_lamp\usart.crf --depend lcedty_night_lamp\usart.d)
+I (../Inc/usart.h)(0x5FE9C9DB)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -381,10 +381,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-F (../Src/stm32f1xx_it.c)(0x5FDF3C89)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_it.o --omf_browse lcedty_night_lamp\stm32f1xx_it.crf --depend lcedty_night_lamp\stm32f1xx_it.d)
-I (../Inc/main.h)(0x5FDF3C8B)
+F (../Src/stm32f1xx_it.c)(0x5FE9C9DB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_it.o --omf_browse lcedty_night_lamp\stm32f1xx_it.crf --depend lcedty_night_lamp\stm32f1xx_it.d)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -411,9 +411,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-I (../Inc/stm32f1xx_it.h)(0x5FDF3C89)
+I (../Inc/stm32f1xx_it.h)(0x5FE9C9DC)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -421,10 +421,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5FC6297F)
-F (../Src/stm32f1xx_hal_msp.c)(0x5FDF3C8A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_msp.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_msp.crf --depend lcedty_night_lamp\stm32f1xx_hal_msp.d)
-I (../Inc/main.h)(0x5FDF3C8B)
+F (../Src/stm32f1xx_hal_msp.c)(0x5FE9C9DC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_msp.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_msp.crf --depend lcedty_night_lamp\stm32f1xx_hal_msp.d)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -451,9 +451,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-F (../Src/stm32f1xx_hal_timebase_tim.c)(0x5FDF3C8A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_timebase_tim.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_timebase_tim.crf --depend lcedty_night_lamp\stm32f1xx_hal_timebase_tim.d)
+F (../Src/stm32f1xx_hal_timebase_tim.c)(0x5FE9C9DC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_timebase_tim.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_timebase_tim.crf --depend lcedty_night_lamp\stm32f1xx_hal_timebase_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -482,7 +482,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_gpio_ex.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_gpio_ex.crf --depend lcedty_night_lamp\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -511,7 +511,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x5FC62995)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal.o --omf_browse lcedty_night_lamp\stm32f1xx_hal.crf --depend lcedty_night_lamp\stm32f1xx_hal.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -540,7 +540,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_rcc.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_rcc.crf --depend lcedty_night_lamp\stm32f1xx_hal_rcc.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -569,7 +569,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_rcc_ex.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_rcc_ex.crf --depend lcedty_night_lamp\stm32f1xx_hal_rcc_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -598,7 +598,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_gpio.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_gpio.crf --depend lcedty_night_lamp\stm32f1xx_hal_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -627,7 +627,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_dma.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_dma.crf --depend lcedty_night_lamp\stm32f1xx_hal_dma.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -656,7 +656,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_cortex.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_cortex.crf --depend lcedty_night_lamp\stm32f1xx_hal_cortex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -685,7 +685,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_pwr.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_pwr.crf --depend lcedty_night_lamp\stm32f1xx_hal_pwr.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -714,7 +714,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_flash.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_flash.crf --depend lcedty_night_lamp\stm32f1xx_hal_flash.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -743,7 +743,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_flash_ex.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_flash_ex.crf --depend lcedty_night_lamp\stm32f1xx_hal_flash_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -772,7 +772,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_exti.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_exti.crf --depend lcedty_night_lamp\stm32f1xx_hal_exti.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -801,7 +801,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_spi.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_spi.crf --depend lcedty_night_lamp\stm32f1xx_hal_spi.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -830,7 +830,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_tim.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_tim.crf --depend lcedty_night_lamp\stm32f1xx_hal_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -859,7 +859,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_tim_ex.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_tim_ex.crf --depend lcedty_night_lamp\stm32f1xx_hal_tim_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -888,7 +888,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c)(0x5FC62996)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\stm32f1xx_hal_uart.o --omf_browse lcedty_night_lamp\stm32f1xx_hal_uart.crf --depend lcedty_night_lamp\stm32f1xx_hal_uart.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -925,7 +925,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FC6297C)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FC6297C)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5FC62995)
@@ -948,7 +948,7 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x5FC6297F)(--c99 -c -
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -962,7 +962,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -977,7 +977,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -990,7 +990,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1004,7 +1004,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1019,7 +1019,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1034,7 +1034,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1050,7 +1050,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1068,7 +1068,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1080,7 +1080,7 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c)(0x5F
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5FC6297F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (../Inc/FreeRTOSConfig.h)(0x5FDF3C88)
+I (../Inc/FreeRTOSConfig.h)(0x5FE9C9DB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5FC6297F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5FC6297F)
@@ -1096,7 +1096,7 @@ I (..\mcu_sdk\protocol.h)(0x5FE34ED4)
 I (..\mcu_sdk\system.h)(0x5FC7869E)
 I (..\mcu_sdk\mcu_api.h)(0x5FC7869E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -1123,10 +1123,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-I (../Inc/usart.h)(0x5FDF3C89)
-I (../Inc/main.h)(0x5FDF3C8B)
+I (../Inc/usart.h)(0x5FE9C9DB)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (..\user\ws2812.h)(0x5FCB7914)
-I (../Inc/spi.h)(0x5FDF3C89)
+I (../Inc/spi.h)(0x5FE9C9DB)
 F (..\mcu_sdk\protocol.c)(0x5FE47FCC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\protocol.o --omf_browse lcedty_night_lamp\protocol.crf --depend lcedty_night_lamp\protocol.d)
 I (..\mcu_sdk\wifi.h)(0x5FCB4CDE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
@@ -1135,7 +1135,7 @@ I (..\mcu_sdk\protocol.h)(0x5FE34ED4)
 I (..\mcu_sdk\system.h)(0x5FC7869E)
 I (..\mcu_sdk\mcu_api.h)(0x5FC7869E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -1162,10 +1162,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-I (../Inc/usart.h)(0x5FDF3C89)
-I (../Inc/main.h)(0x5FDF3C8B)
+I (../Inc/usart.h)(0x5FE9C9DB)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (..\user\ws2812.h)(0x5FCB7914)
-I (../Inc/spi.h)(0x5FDF3C89)
+I (../Inc/spi.h)(0x5FE9C9DB)
 F (..\mcu_sdk\system.c)(0x5FC7869E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\user -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I..\mcu_sdk-I D:\Document\MyWork\IOT\code\lcedty_night_lamp\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o lcedty_night_lamp\system.o --omf_browse lcedty_night_lamp\system.crf --depend lcedty_night_lamp\system.d)
 I (..\mcu_sdk\wifi.h)(0x5FCB4CDE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
@@ -1174,7 +1174,7 @@ I (..\mcu_sdk\protocol.h)(0x5FE34ED4)
 I (..\mcu_sdk\system.h)(0x5FC7869E)
 I (..\mcu_sdk\mcu_api.h)(0x5FC7869E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FC62995)
-I (../Inc/stm32f1xx_hal_conf.h)(0x5FDF3C8B)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5FE9C9DC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5FC62995)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5FC62995)
@@ -1201,7 +1201,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5FC62995)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FC62995)
-I (../Inc/usart.h)(0x5FDF3C89)
-I (../Inc/main.h)(0x5FDF3C8B)
+I (../Inc/usart.h)(0x5FE9C9DB)
+I (../Inc/main.h)(0x5FE9C9DC)
 I (..\user\ws2812.h)(0x5FCB7914)
-I (../Inc/spi.h)(0x5FDF3C89)
+I (../Inc/spi.h)(0x5FE9C9DB)

@@ -59,6 +59,8 @@ osThreadId defaultTaskHandle;
 osThreadId WB3SHandle;
 osThreadId TH_SensorHandle;
 osThreadId KeyHandle;
+osThreadId SHAKE_PROCESSHandle;
+osSemaphoreId SHAKEHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -69,6 +71,7 @@ void StartDefaultTask(void const * argument);
 void StartTask_WB3S(void const * argument);
 void StartTask_TH_Sensor(void const * argument);
 void StartTask_Key(void const * argument);
+void StartTask_SHAKE_PROCESS(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -102,6 +105,11 @@ void MX_FREERTOS_Init(void) {
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
+  /* Create the semaphores(s) */
+  /* definition and creation of SHAKE */
+  osSemaphoreDef(SHAKE);
+  SHAKEHandle = osSemaphoreCreate(osSemaphore(SHAKE), 1);
+
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
@@ -128,8 +136,12 @@ void MX_FREERTOS_Init(void) {
   TH_SensorHandle = osThreadCreate(osThread(TH_Sensor), NULL);
 
   /* definition and creation of Key */
-  osThreadDef(Key, StartTask_Key, osPriorityIdle, 0, 128);
+  osThreadDef(Key, StartTask_Key, osPriorityNormal, 0, 128);
   KeyHandle = osThreadCreate(osThread(Key), NULL);
+
+  /* definition and creation of SHAKE_PROCESS */
+  osThreadDef(SHAKE_PROCESS, StartTask_SHAKE_PROCESS, osPriorityNormal, 0, 64);
+  SHAKE_PROCESSHandle = osThreadCreate(osThread(SHAKE_PROCESS), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -312,6 +324,46 @@ void StartTask_Key(void const * argument)
     osDelay(50);
   }
   /* USER CODE END StartTask_Key */
+}
+
+/* USER CODE BEGIN Header_StartTask_SHAKE_PROCESS */
+/**
+* @brief Function implementing the SHAKE_PROCESS thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask_SHAKE_PROCESS */
+void StartTask_SHAKE_PROCESS(void const * argument)
+{
+  /* USER CODE BEGIN StartTask_SHAKE_PROCESS */
+  /* Infinite loop */
+	unsigned char R_Data,G_Data,B_Data;
+  for(;;)
+  {
+		osSemaphoreWait(SHAKEHandle,osWaitForever);
+		LED_H_Data += 60; 
+		if(LED_H_Data >= 360) 
+		{
+				LED_H_Data = 0;
+				LED_S_Data = 0;
+		}
+		else
+		{
+			if(LED_S_Data == 0)
+			{	
+				LED_H_Data = 0;
+				LED_S_Data = 100;
+			}
+		}
+		HSVtoRGB(&R_Data,&G_Data,&B_Data,LED_H_Data,LED_S_Data,LED_V_Data);
+		for(unsigned char i = 0; i < 8; i++)
+		{
+			Set_Color(R_Data,G_Data,B_Data,i);
+		} 
+		Send_Color();
+
+  }
+  /* USER CODE END StartTask_SHAKE_PROCESS */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -51,8 +51,10 @@
 
 /* USER CODE BEGIN PV */
 
+extern osSemaphoreId SHAKEHandle;
+
 uint8_t Switch_Led_Status = 0;//¿ª¹Ø×´Ì¬
-unsigned int LED_V_Data,LED_S_Data,LED_H_Data;
+int LED_V_Data,LED_S_Data,LED_H_Data;
 uint8_t Wb3s_Wifi_Status = 0;//wifi×´Ì¬
 
 //===========UART===============
@@ -82,11 +84,17 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		HAL_UART_Receive_IT(&huart1,Rx_uart1_buff,1);
 	}
 
-	if(huart->Instance == USART2)
-	{
-		HAL_UART_Transmit(&huart2,Rx_uart2_buff,1,1000);
-		HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
-	}
+//	if(huart->Instance == USART2)
+//	{
+//		HAL_UART_Transmit(&huart2,Rx_uart2_buff,1,1000);
+//		HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
+//	}
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin == GPIO_PIN_3)
+		osSemaphoreRelease(SHAKEHandle);
 }
 /* USER CODE END 0 */
 
@@ -121,10 +129,9 @@ int main(void)
   MX_DMA_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	HAL_UART_Receive_IT(&huart1,Rx_uart1_buff,1);
-	HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
+//	HAL_UART_Receive_IT(&huart2,Rx_uart2_buff,1);
 	
 	HAL_Delay(20);
 	wifi_protocol_init();//³õÊ¼»¯Í¿Ñ»WB3S

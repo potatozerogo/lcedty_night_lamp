@@ -3,3 +3,6 @@ sch，PCB在立创开源平台。https://oshwhub.com/potatozero/li-chuangeda-tu-
 
 2020.12.24  
 加入长按按键调亮度
+
+2020.12.28
+加入敲击改变颜色
